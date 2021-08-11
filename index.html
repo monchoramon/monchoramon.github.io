@@ -1,10 +1,3 @@
-<?
-    date_default_timezone_set('America/Mexico_City');
-    // Unix
-    setlocale(LC_TIME, 'es_ES.UTF-8');
-    // Windows
-    setlocale(LC_TIME, "spanish");
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,21 +13,8 @@
 <body>
     
     <header>
-        <div class="lineaSeparadoraHeader text-white">
-            <?=date("d/m/Y H:i");?>
-        </div>
+        <div class="lineaSeparadoraHeader text-white"></div>
     </header>
-    <? 
-        $mostrarEstadoMunicipio = false;
-        $mostrarEnlaces = false;
-        $mostrarTelefono = false;
-        $mostrarCorreoElectronico = false;
-
-        $estadoMunicipio = "00111100 00110011";
-        if ($mostrarEstadoMunicipio) {
-            $estadoMunicipio = "Lázaro Cárdenas Michoacán";
-        }
-    ?>
     <div class="container-fluid p-0">
 
         <div class="contenedorInformacionEspecifica w-100 row m-0 p-0">
@@ -68,15 +48,9 @@
                         <div class="icon">
                             <i class="fa fa-whatsapp text-white mr3"></i>
                         </div>
-                        <?
-                            $numeroTelefono = "00111100 00110011";
-                            if ( $mostrarTelefono ) {
-                                $numeroTelefono = "753-538-38-42";
-                            }
-                        ?>
                         <div class="apartadoInformacionEspecifica">
                             <span class="font-bold">Tel. cel.</span>
-                            <div class="text-white font-size-18"><?=$numeroTelefono?></div>
+                            <div class="text-white font-size-18">753-538-38-42</div>
                         </div>
                     </div>
 
@@ -84,15 +58,9 @@
                         <div class="icon">
                             <i class="fa fa-envelope text-white mr3"></i>
                         </div>
-                        <?
-                            $correoElectronico = "00111100 00110011";
-                            if ( $mostrarCorreoElectronico ) {
-                                $correoElectronico = "ramcruz1993@gmail.com";
-                            }
-                        ?>
                         <div class="apartadoInformacionEspecifica">
                             <span class="font-bold">Correo electrónico:</span>
-                            <div class="text-white font-size-18"><?=$correoElectronico?></div>
+                            <div class="text-white font-size-18">ramcruz1993@gmail.com</div>
                         </div>
                     </div>
 
@@ -101,18 +69,12 @@
                             <i class="fa fa-linkedin-square text-white mr3"></i>
                         </div>
                         <div class="apartadoInformacionEspecifica">
-                            <?
-                                $linkLinkedIn = "#";
-                                if ($mostrarEnlaces) {
-                                    $linkLinkedIn = "https://www.linkedin.com/in/ramón-martínez-cruz-648300143";
-                                }
-                            ?>
                             <span class="font-bold">LinkedIn</span>
                             <div class="text-white">
                                 <a
                                 class="font-size-18"
-                                href="<?=$linkLinkedIn?>" 
-                                title="<?=$linkLinkedIn?>" 
+                                href="https://www.linkedin.com/in/ramón-martínez-cruz-648300143" 
+                                title="https://www.linkedin.com/in/ramón-martínez-cruz-648300143" 
                                 target="_blank">Ir a esta dirección</a>
                             </div>
                         </div>
@@ -123,15 +85,12 @@
                             <i class="fa fa-github text-white mr3"></i>
                         </div>
                         <div class="apartadoInformacionEspecifica">
-                            <?
-                                $linkGitHub = "https://github.com/monchoramon";
-                            ?>
                             <span class="font-bold">GitHub:</span>
                             <div class="text-white">
                                 <a 
                                 class="font-size-18"
-                                href="<?=$linkGitHub?>" 
-                                title="<?=$linkGitHub?>" 
+                                href="https://github.com/monchoramon" 
+                                title="https://github.com/monchoramon" 
                                 target="_blank">Ir a esta dirección</a>
                             </div>
                         </div>
@@ -330,7 +289,7 @@
                     <div class="contenidoQuienSoyExperiencia font-size-18 col-12 col-lg-6 mb-3">
                         <div class="educacion d-flex align-items-center">
                             <div class="bineta colorFondoVerde mr10"></div>
-                            <div class="colorLetraNegra"><b>Ingeniería en sistemas</b> (Instituto tecnológico de <?=$estadoMunicipio?>)</div>
+                            <div class="colorLetraNegra"><b>Ingeniería en sistemas</b> (Instituto tecnológico de Lázaro Cárdenas Michoacán)</div>
                         </div>
                     </div>
 
@@ -376,7 +335,7 @@
                                         <div class="contenedorExperienciaTareasRealizadas_1">
         
                                             <div class="informacionEmpresaTiempo text-center">
-                                                <b>XROM SYSTEMS</b> – <?=$estadoMunicipio?>
+                                                <b>XROM SYSTEMS</b> – Lázaro Cárdenas Michoacán
                                                 <p class="colorVerde mb-0">Desarrollador web</p>
                                                 <p>Del 01/01/2019 al 01/08/2019</p>
                                             </div>
@@ -401,21 +360,15 @@
                                                 </div>
             
                                                 <div class="mt-3 ml10">
-                                                    <?
-                                                        $linkProyecto = "#";
-                                                        if ( $mostrarEnlaces ) {
-                                                            $linkProyecto = "http://lorenaposadas.com.mx";
-                                                        }
-                                                    ?>
                                                     <div class="contenedorTareas d-flex align-items-center">
                                                         <div class="bineta colorFondoNaranja mr10"></div>
                                                         <div class="font-bold">Link de sitio web:</div>
                                                     </div>
                                                     <p class="ml21">
                                                         <a 
-                                                        href="<?=$linkProyecto?>"
-                                                        title="<?=$linkProyecto?>"
-                                                        target="_blank"><?=$linkProyecto?></a>
+                                                        href="http://lorenaposadas.com.mx"
+                                                        title="http://lorenaposadas.com.mx"
+                                                        target="_blank">http://lorenaposadas.com.mx</a>
                                                     </p>
                                                 </div>
             
@@ -428,7 +381,7 @@
                                         <div class="contenedorExperienciaTareasRealizadas_2">
         
                                             <div class="informacionEmpresaTiempo text-center">
-                                                <b>TELECOMO</b> – <?=$estadoMunicipio?>
+                                                <b>TELECOMO</b> – Lázaro Cárdenas Michoacán
                                                 <p class="colorVerde mb-0">Soporte técnico</p>
                                                 <p>Del 12/08/2019 al 06/09/2019</p>
                                             </div>
@@ -451,16 +404,9 @@
                                     <td>
                                         
                                         <div class="contenedorExperienciaTareasRealizadas_3">
-                                            
-                                            <? 
-                                                $estadoMunicipioSOLEI = "00111100 00110011";
-                                                if ($mostrarEstadoMunicipio) {
-                                                    $estadoMunicipioSOLEI = "Toluca de Lerdo edo. Méxicon";
-                                                }
-                                            ?>
 
                                             <div class="informacionEmpresaTiempo text-center">
-                                                <b>SOLEI</b> – <?=$estadoMunicipioSOLEI?>
+                                                <b>SOLEI</b> – Toluca de Lerdo edo. México
                                                 <p class="colorVerde mb-0">Desarrollador web</p>
                                                 <div class="text-center">
                                                     (freelance)
@@ -518,31 +464,18 @@
                                                             <div class="font-bold">Enlaces de administrador y app web.</div>
                                                         </div>
                                                         <div class="contenedorLinksSistemasWeb ml40">
-                                                            <?                                                                
-                                                                $linkProyecto = "#";
-                                                                if ( $mostrarEnlaces ) {
-                                                                    $linkProyecto = "https://app.redylab.com.mx";
-
-                                                                }
-                                                            ?>
                                                             <div class="font-bold mt-3">App:</div>
                                                             <a 
-                                                            href="<?=$linkProyecto?>" 
-                                                            title="<?=$linkProyecto?>" 
-                                                            target="_blank"><?=$linkProyecto?></a>
+                                                            href="https://app.redylab.com.mx" 
+                                                            title="https://app.redylab.com.mx" 
+                                                            target="_blank">https://app.redylab.com.mx</a>
                                                         </div>
                                                         <div class="contenedorLinksSistemasWeb ml40">
-                                                            <?
-                                                                $linkProyecto = "#";
-                                                                if ( $mostrarEnlaces ) {
-                                                                    $linkProyecto = "http://admin.redylab.com.mx";
-                                                                }
-                                                            ?>
                                                             <div class="font-bold mt-3">Administrador:</div>
                                                             <a 
-                                                            href="<?=$linkProyecto?>" 
-                                                            title="<?=$linkProyecto?>" 
-                                                            target="_blank"><?=$linkProyecto?></a>
+                                                            href="http://admin.redylab.com.mx" 
+                                                            title="http://admin.redylab.com.mx" 
+                                                            target="_blank">http://admin.redylab.com.mx</a>
                                                         </div>
                                                     </div>                                                    
 
@@ -561,16 +494,10 @@
                                                     </div>
 
                                                     <div class="contenedorLinksSistemasWeb ml40">
-                                                        <?
-                                                            $linkProyecto = "#";
-                                                            if ( $mostrarEnlaces ) {
-                                                                $linkProyecto = "http://calilab.com.mx";
-                                                            }
-                                                        ?>
                                                         <a 
-                                                        href="<?=$linkProyecto?>" 
-                                                        title="<?=$linkProyecto?>" 
-                                                        target="_blank"><?=$linkProyecto?></a>
+                                                        href="http://calilab.com.mx" 
+                                                        title="http://calilab.com.mx" 
+                                                        target="_blank">http://calilab.com.mx</a>
                                                     </div>
 
                                                 </div>
@@ -623,7 +550,7 @@
 
     <div class="footer">
         <footer>
-            <li class="listStyleNone">&copy;<?="Derechos reservados ".date('Y')?></li>
+            <li class="listStyleNone">&copy;Derechos reservados 2021</li>
         </footer>
     </div>
 
