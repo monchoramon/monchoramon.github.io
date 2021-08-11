@@ -1,2 +1,631 @@
-Hola
- efefe
+<?
+    date_default_timezone_set('America/Mexico_City');
+    // Unix
+    setlocale(LC_TIME, 'es_ES.UTF-8');
+    // Windows
+    setlocale(LC_TIME, "spanish");
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-MCRAMON</title>
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/estilosConfiguracion.css">
+    <link rel="stylesheet" href="assets/css/librerias/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="lineaSeparadoraHeader text-white">
+            <?=date("d/m/Y H:i");?>
+        </div>
+    </header>
+    <? 
+        $mostrarEstadoMunicipio = false;
+        $mostrarEnlaces = false;
+        $mostrarTelefono = false;
+        $mostrarCorreoElectronico = false;
+
+        $estadoMunicipio = "00111100 00110011";
+        if ($mostrarEstadoMunicipio) {
+            $estadoMunicipio = "Lázaro Cárdenas Michoacán";
+        }
+    ?>
+    <div class="container-fluid p-0">
+
+        <div class="contenedorInformacionEspecifica w-100 row m-0 p-0">
+            <!-- Barra izquierda -->
+            <div class="contenedorPrincioalInformacionContacto col-12 col-lg-2 px-0">
+
+                <div class="col-12 contenedorNombreUsuario">
+                    
+                    <div class="nombreUsuario colorLetraAzul">
+                        <h2>RAMÓN</h2>
+                        <h2>MARTÍNEZ CRUZ</h2>
+                    </div>
+
+                    <div class="contenedorImagen">
+                        <img 
+                        src="assets/img/user.png" 
+                        alt="Ramón Martínez Cruz"
+                        width="130">
+                    </div>
+
+                </div>
+
+                <div class="informacionContactoConocimientos">
+
+                    <div class="informacionContacto">
+                        <h4 class="p-1 mb-0 text-white">Informacion de contacto</h4>
+                        <div class="lineaSeparadoraVerde"></div>
+                    </div>
+
+                    <div class="seccionInformacionEspecifica d-flex mx-4 mt-2 font-size-20">
+                        <div class="icon">
+                            <i class="fa fa-whatsapp text-white mr3"></i>
+                        </div>
+                        <?
+                            $numeroTelefono = "00111100 00110011";
+                            if ( $mostrarTelefono ) {
+                                $numeroTelefono = "753-538-38-42";
+                            }
+                        ?>
+                        <div class="apartadoInformacionEspecifica">
+                            <span class="font-bold">Tel. cel.</span>
+                            <div class="text-white font-size-18"><?=$numeroTelefono?></div>
+                        </div>
+                    </div>
+
+                    <div class="seccionInformacionEspecifica d-flex mx-4 mt-2 font-size-20">
+                        <div class="icon">
+                            <i class="fa fa-envelope text-white mr3"></i>
+                        </div>
+                        <?
+                            $correoElectronico = "00111100 00110011";
+                            if ( $mostrarCorreoElectronico ) {
+                                $correoElectronico = "ramcruz1993@gmail.com";
+                            }
+                        ?>
+                        <div class="apartadoInformacionEspecifica">
+                            <span class="font-bold">Correo electrónico:</span>
+                            <div class="text-white font-size-18"><?=$correoElectronico?></div>
+                        </div>
+                    </div>
+
+                    <div class="seccionInformacionEspecifica d-flex mx-4 mt-2 font-size-20">
+                        <div class="icon">
+                            <i class="fa fa-linkedin-square text-white mr3"></i>
+                        </div>
+                        <div class="apartadoInformacionEspecifica">
+                            <?
+                                $linkLinkedIn = "#";
+                                if ($mostrarEnlaces) {
+                                    $linkLinkedIn = "https://www.linkedin.com/in/ramón-martínez-cruz-648300143";
+                                }
+                            ?>
+                            <span class="font-bold">LinkedIn</span>
+                            <div class="text-white">
+                                <a
+                                class="font-size-18"
+                                href="<?=$linkLinkedIn?>" 
+                                title="<?=$linkLinkedIn?>" 
+                                target="_blank">Ir a esta dirección</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seccionInformacionEspecifica d-flex mx-4 mt-2 font-size-20">
+                        <div class="icon">
+                            <i class="fa fa-github text-white mr3"></i>
+                        </div>
+                        <div class="apartadoInformacionEspecifica">
+                            <?
+                                $linkGitHub = "https://github.com/monchoramon";
+                            ?>
+                            <span class="font-bold">GitHub:</span>
+                            <div class="text-white">
+                                <a 
+                                class="font-size-18"
+                                href="<?=$linkGitHub?>" 
+                                title="<?=$linkGitHub?>" 
+                                target="_blank">Ir a esta dirección</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="informacionContacto mt-3">
+                        <h4 class="p-1 mb-0 text-white">Tecnologías</h4>
+                        <div class="lineaSeparadoraVerde"></div>
+                    </div>
+
+                    <div class="seccionInformacionEspecifica mx-2 mt-2 font-size-14 text-white">
+                        
+                        <div class="table-responsive">
+                            <table width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="colorNaranja">Lenguajes / librerías / BD</th>
+                                        <th class="colorNaranja text-center">
+                                            Plugins
+                                            <p class="p3"></p>
+                                        </th>
+                                        <th class="colorNaranja">Control de versiones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            PHP
+                                            <p class="colorVerde m-0">Intermedio / avanzado</p>
+                                        </td>
+                                        <td>
+                                            Tempus Dominus
+                                            (Bootstrap)
+                                            <p class="p3 m-0"></p>
+                                        </td>
+                                        <td>
+                                            GitHub
+                                            GitLab
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            JS
+                                            <p class="colorVerde m-0">Intermedio / avanzado</p>
+                                        </td>
+                                        <td>
+                                            FullCalendar
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            JQuery
+                                            <p class="colorVerde m-0">Intermedio / avanzado</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15"></p>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            TypeScript
+                                            <p class="colorVerde m-0">Básico</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            HTML
+                                            <p class="colorVerde m-0">Intermedio / avanzado</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            CSS
+                                            <p class="colorVerde m-0">Intermedio / avanzado</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Bootstrap
+                                            <p class="colorVerde m-0">Intermedio / avanzado</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            MySQL (SQL)
+                                            <p class="colorVerde m-0">Intermedio</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="colorTrOcultar">
+                                        <td>
+                                            Workbench
+                                            <p class="colorVerde m-0">Intermedio</p>
+                                        </td>
+                                        <td>
+                                            <p class="p22 m-0"></p>
+                                        </td>
+                                        <td>
+                                            <p class="p15 m-0"></p>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                    <div class="informacionContacto mt-3">
+                        <h4 class="p-1 mb-0 text-white">Idiomas</h4>
+                        <div class="lineaSeparadoraVerde"></div>
+                    </div>
+
+                    <div class="seccionInformacionEspecifica seccionIdiomas mx-2 mt-2 font-size-14 text-white">
+                        <div class="contenedorIdioma d-flex align-items-center">
+                            <div class="bineta colorFondoNaranja mr10"></div>
+                            <span class="font-size-18">Español nativo</span>
+                        </div>
+                        <div class="contenedorIdioma d-flex align-items-center">
+                            <div class="bineta colorFondoNaranja mr10"></div>
+                            <span class="font-size-18">Inglés básico</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Barra derecha -->
+            <div class="experiencia col-12 col-lg-10">
+
+                <div class="colorLetraAzul col-12 text-center mt-3">
+                    <h2 class="font-bold">¿Quién soy?</h2>
+                    <div class="lineaSeparadoraVerde col-6 mx5 mb-2 centrarContenido"></div>
+                    <div class="contenidoQuienSoyExperiencia colorLetraNegra font-size-18 col-12 col-lg-6">
+                        Una persona con mentalidad positiva que intenta superarse día con día resolviendo 
+                        los problemas relacionados con la programación y la vida cotidiana, me gusta 
+                        programar
+                        y resolver problemas, si no entiendo algo de lo que estoy 
+                        desarrollando / programando,
+                        me gusta primeramente intentar por mi cuenta darle solución si veo que no puedo o 
+                        tengo dudas con algún tema o tarea en particular investigo hasta encontrar la solución.
+                    </div>
+                </div>
+
+                <div class="colorLetraAzul col-12 text-center mt-5">
+
+                    <h2 class="font-bold">Nivel académico / Cursos</h2>
+                    <div class="lineaSeparadoraVerde col-6 mx5 mb-2 centrarContenido"></div>
+
+                    <div class="contenidoQuienSoyExperiencia font-size-18 col-12 col-lg-6 mb-3">
+                        <div class="educacion d-flex align-items-center">
+                            <div class="bineta colorFondoVerde mr10"></div>
+                            <div class="colorLetraNegra"><b>Ingeniería en sistemas</b> (Instituto tecnológico de <?=$estadoMunicipio?>)</div>
+                        </div>
+                    </div>
+
+                    <div class="contenidoQuienSoyExperiencia font-size-18 col-12 col-lg-6 mb-3">
+                        <div class="educacion d-flex align-items-center">
+                            <div class="bineta colorFondoVerde mr10"></div>
+                            <div class="colorLetraNegra"><b>Curso de Bootstrap 4</b> (Udemy)</div>
+                        </div>
+                    </div>
+
+                    <div class="contenidoQuienSoyExperiencia font-size-18 col-12 col-lg-6 mb-3">
+                        <div class="educacion d-flex align-items-center">
+                            <div class="bineta colorFondoVerde mr10"></div>
+                            <div class="colorLetraNegra"><b>Curso de Bootstrap 4 responsive design</b> (Udemy)</div>
+                        </div>
+                    </div>
+
+                    <div class="contenidoQuienSoyExperiencia font-size-18 col-12 col-lg-6 mb-3">
+                        <div class="educacion d-flex align-items-center">
+                            <div class="bineta colorFondoVerde mr10"></div>
+                            <div class="colorLetraNegra"><b>Curso de JS</b> (Udemy)</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tabla experiencia -->
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr class="text-center colorLetraAzul tablaBorderExperiencia">
+                                    <th colspan="2">
+                                        <h3 class="font-bold">Experiencia</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="d-flex"> 
+                                <tr class="tablaBorderExperiencia borderNS">
+                                    <!-- Columna 1 -->
+                                    <td>
+                                        
+                                        <div class="contenedorExperienciaTareasRealizadas_1">
+        
+                                            <div class="informacionEmpresaTiempo text-center">
+                                                <b>XROM SYSTEMS</b> – <?=$estadoMunicipio?>
+                                                <p class="colorVerde mb-0">Desarrollador web</p>
+                                                <p>Del 01/01/2019 al 01/08/2019</p>
+                                            </div>
+        
+                                            <div class="tareasRealizadas p-2">
+                                                <b>Tareas realizadas:</b>
+                                                <div class="contenedorTareas d-flex align-items-center">
+                                                    <div class="bineta colorFondoNaranja mr10"></div>
+                                                    <div>Pasar a responsive algunos sitios web.</div>
+                                                </div>
+                                                <div class="contenedorTareas d-flex align-items-center">
+                                                    <div class="bineta colorFondoNaranja mr10"></div>
+                                                    <div>Mejorar la estructura HTML a algunos sitios web.</div>
+                                                </div>
+                                                <div class="contenedorTareas d-flex align-items-center">
+                                                    <div class="bineta colorFondoNaranja mr10"></div>
+                                                    <div>Maquetar algunos diseños desarrollados.</div>
+                                                </div>
+                                                <div class="contenedorTareas d-flex align-items-center">
+                                                    <div class="bineta colorFondoNaranja mr10"></div>
+                                                    <div>Implementar nuevas funcionalidades a los sistemas web.</div>
+                                                </div>
+            
+                                                <div class="mt-3 ml10">
+                                                    <?
+                                                        $linkProyecto = "#";
+                                                        if ( $mostrarEnlaces ) {
+                                                            $linkProyecto = "http://lorenaposadas.com.mx";
+                                                        }
+                                                    ?>
+                                                    <div class="contenedorTareas d-flex align-items-center">
+                                                        <div class="bineta colorFondoNaranja mr10"></div>
+                                                        <div class="font-bold">Link de sitio web:</div>
+                                                    </div>
+                                                    <p class="ml21">
+                                                        <a 
+                                                        href="<?=$linkProyecto?>"
+                                                        title="<?=$linkProyecto?>"
+                                                        target="_blank"><?=$linkProyecto?></a>
+                                                    </p>
+                                                </div>
+            
+                                                <div class="lineaSeparadoraVerde w412 mx5 mb-2 centrarContenido"></div>
+            
+                                            </div>
+        
+                                        </div>
+        
+                                        <div class="contenedorExperienciaTareasRealizadas_2">
+        
+                                            <div class="informacionEmpresaTiempo text-center">
+                                                <b>TELECOMO</b> – <?=$estadoMunicipio?>
+                                                <p class="colorVerde mb-0">Soporte técnico</p>
+                                                <p>Del 12/08/2019 al 06/09/2019</p>
+                                            </div>
+        
+                                            <div class="tareasRealizadas p-2">
+                                                <b>Tareas realizadas:</b>
+                                                <div class="contenedorTareas d-flex align-items-center">
+                                                    <div class="bineta colorFondoNaranja mr10"></div>
+                                                    <div>Mantenimiento preventivo a equipos de cómputo.</div>
+                                                </div>    
+                                            </div>
+        
+                                        </div>
+        
+        
+                                    </td>
+                                </tr>
+                                <tr class="tablaBorderExperiencia borderNS borderNL">
+                                    <!-- Columna 2 -->
+                                    <td>
+                                        
+                                        <div class="contenedorExperienciaTareasRealizadas_3">
+                                            
+                                            <? 
+                                                $estadoMunicipioSOLEI = "00111100 00110011";
+                                                if ($mostrarEstadoMunicipio) {
+                                                    $estadoMunicipioSOLEI = "Toluca de Lerdo edo. Méxicon";
+                                                }
+                                            ?>
+
+                                            <div class="informacionEmpresaTiempo text-center">
+                                                <b>SOLEI</b> – <?=$estadoMunicipioSOLEI?>
+                                                <p class="colorVerde mb-0">Desarrollador web</p>
+                                                <div class="text-center">
+                                                    (freelance)
+                                                </div>
+                                                <p>Del 01/03/2020 al 30/07/2021</p>
+                                            </div>
+
+                                            <div class="lineaSeparadoraVerde w412 mx5 mb-2 centrarContenido"></div>
+        
+                                            <div class="tareasRealizadas p-2">
+                                                <b>Tareas realizadas:</b>
+                                                
+                                                <div class="mt-3 ml10 contenedorEspecificacionesTareas_1">
+                                                    
+                                                    <div class="contenedorTareas d-flex align-items-center">
+                                                        <div class="bineta colorFondoNaranja mr10"></div>
+                                                        <div>Diseño de un modelo de BD para una app web y administrador de laboratorio clínico.</div>
+                                                    </div>
+                                                    <div class="contenedorTareas d-flex align-items-center">
+                                                        <div class="bineta colorFondoNaranja mr10"></div>
+                                                        <div>Desarrollo de app web y administrador para un laboratorio clínico.</div>
+                                                    </div>
+
+                                                    <div class="font-bold ml15">Administrador:</div>
+                                                    <div>
+                                                        <ol>
+                                                            <li>Calendario de citas médicas agendadas.</li>
+                                                            <li>Panel de configuración para la app y admin., asignación de iconos, color y para mostrar u ocultar alguno de los catálogos.</li>
+                                                            <li>Registro, actualización y eliminación de citas médicas.</li>
+                                                            <li>Registro, actualización y eliminación de administradores.</li>
+                                                            <li>Asignación, actualización y eliminación de días festivos.</li>
+                                                            <li>Catálogo para el registro, actualización y eliminación de promociones para los pacientes.</li>
+                                                            <li>Catálogo para la creación, actualización y eliminación de encuestas de satisfacción para los pacientes.</li>
+                                                            <li>Catálogo para generar cupones de descuento o alguna otra promoción.</li>
+                                                            <li>Catálogo para el resultado de encuestas.</li>
+                                                            <li>Catálogo de registro, actualización y eliminación de servicios de laboratorio.</li>
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="font-bold ml15">Web App:</div>
+                                                    <div>
+                                                        <ol>
+                                                            <li>Panel de inicio</li>
+                                                            <li>Panel de promociones.</li>
+                                                            <li>Panel de encuestas.</li>
+                                                            <li>Panel de sucursales.</li>
+                                                            <li>Panel para agendar citas.</li>
+                                                            <li>Panel de mi perfil, login / actualizar información.</li>
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="seccionSistemasWebDesarrollados_1">
+                                                        <div class="contenedorEnlacesSistemasWeb d-flex align-items-center ml16">
+                                                            <div class="bineta colorFondoNaranja mr10"></div>
+                                                            <div class="font-bold">Enlaces de administrador y app web.</div>
+                                                        </div>
+                                                        <div class="contenedorLinksSistemasWeb ml40">
+                                                            <?                                                                
+                                                                $linkProyecto = "#";
+                                                                if ( $mostrarEnlaces ) {
+                                                                    $linkProyecto = "https://app.redylab.com.mx";
+
+                                                                }
+                                                            ?>
+                                                            <div class="font-bold mt-3">App:</div>
+                                                            <a 
+                                                            href="<?=$linkProyecto?>" 
+                                                            title="<?=$linkProyecto?>" 
+                                                            target="_blank"><?=$linkProyecto?></a>
+                                                        </div>
+                                                        <div class="contenedorLinksSistemasWeb ml40">
+                                                            <?
+                                                                $linkProyecto = "#";
+                                                                if ( $mostrarEnlaces ) {
+                                                                    $linkProyecto = "http://admin.redylab.com.mx";
+                                                                }
+                                                            ?>
+                                                            <div class="font-bold mt-3">Administrador:</div>
+                                                            <a 
+                                                            href="<?=$linkProyecto?>" 
+                                                            title="<?=$linkProyecto?>" 
+                                                            target="_blank"><?=$linkProyecto?></a>
+                                                        </div>
+                                                    </div>                                                    
+
+                                                </div>
+
+                                                <div class="mt-3 ml10 contenedorEspecificacionesTareas_2">
+
+                                                    <div class="contenedorTareas d-flex align-items-center mb-3">
+                                                        <div class="bineta colorFondoNaranja mr10"></div>
+                                                        <div>Mejora de sitio web.</div>
+                                                    </div>
+
+                                                    <div class="contenedorEnlacesSistemasWeb d-flex align-items-center ml16">
+                                                        <div class="bineta colorFondoNaranja mr10"></div>
+                                                        <div class="font-bold">Enlace al sitio web.</div>
+                                                    </div>
+
+                                                    <div class="contenedorLinksSistemasWeb ml40">
+                                                        <?
+                                                            $linkProyecto = "#";
+                                                            if ( $mostrarEnlaces ) {
+                                                                $linkProyecto = "http://calilab.com.mx";
+                                                            }
+                                                        ?>
+                                                        <a 
+                                                        href="<?=$linkProyecto?>" 
+                                                        title="<?=$linkProyecto?>" 
+                                                        target="_blank"><?=$linkProyecto?></a>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="mt-3 ml10 contenedorEspecificacionesTareas_2">
+
+                                                    <div class="contenedorTareas d-flex align-items-center mb-3">
+                                                        <div class="bineta colorFondoNaranja mr10"></div>
+                                                        <div>Desarrollo de app web y administrador para congresos virtuales (no terminado).</div>
+                                                    </div>
+
+                                                    <div class="font-bold ml15">Administrador:</div>
+                                                    <div>
+                                                        <ol>
+                                                            <li>Calendario de eventos.</li>
+                                                            <li>Panel de alta de cursos / conferencias.</li>
+                                                            <li>Panel de registro de ponentes.</li>
+                                                            <li>Panel de tipos de registros.</li>
+                                                            <li>Panel de registro de salas.</li>
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="font-bold ml15">Web App:</div>
+                                                    <div>
+                                                        <ol>
+                                                            <li>Registro a congreso o a evento.</li>
+                                                            <li>Panel para mostrar los eventos y lista de precios.</li>
+                                                            <li>Panel para ver información general del evento e ingresar al evento si está registrado a dicho evento.</li>
+                                                        </ol>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+        
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <footer>
+            <li class="listStyleNone">&copy;<?="Derechos reservados ".date('Y')?></li>
+        </footer>
+    </div>
+
+</body>
+</html>       

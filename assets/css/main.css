@@ -1,0 +1,108 @@
+/* Lineas separadoras */
+.lineaSeparadoraVerde {
+    background-color: rgba(0,176,80);
+    padding: 5px;
+    margin: 0px 10px;
+}
+
+.lineaSeparadoraHeader {
+    background-color: orange;
+    text-align: center;
+    padding: 3px;
+}
+
+.footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background-color: rgba(0,176,80);
+    text-align: center;
+    padding: 10px;
+}
+
+footer li {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Iconos */
+.icon img {
+    width: 10px;
+    height: 10px;
+    color: #fff;
+}
+
+/* Información especifica */
+.contenedorInformacionEspecifica {
+    width: 100%;
+    padding: 10px;
+}
+
+.contenedorPrincioalInformacionContacto {
+    height: auto;
+    padding: 0px;
+    padding-bottom: 50px;
+    background-color: rgba(38,38,38);
+}   
+
+
+/* Contenedor nombre de usuario */
+.contenedorNombreUsuario {
+    background-color: #fff;
+    padding: 10px;
+    height: 250px;
+    text-align: center;
+}
+
+.nombreUsuario h2 {
+    font-weight: bold;
+}
+
+/* Contenedor imagen usuario */
+.contenedorImagen {
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    margin: 0px auto;
+    background-color: rgb(190,202,224);
+}
+
+/* Información de contacto */
+.informacionContacto {
+    padding: 1px;
+    text-align: center;
+}
+
+.informacionContacto h4 {
+    font-weight: bold;
+}
+
+.seccionInformacionEspecifica {
+    padding: 5px;
+}
+
+.apartadoInformacionEspecifica span {
+    color: rgba(0,176,80);
+}
+
+/* Tecnologías */
+
+.seccionInformacionEspecifica table tr {
+   border-bottom: 1px solid orange;
+}
+
+/* Lenguajes */
+.contenedorIdioma {
+    margin: 0px 20px;
+}
+
+/* Quien soy / Experiencia */
+.contenidoQuienSoyExperiencia {
+    text-align: justify;
+    margin: 0px auto;
+}
+
+/* Tabla experencia */
+.tablaBorderExperiencia {
+    border: 1px solid orange;
+}
